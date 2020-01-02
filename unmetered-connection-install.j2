@@ -1,0 +1,6 @@
+{% include 'unmetered-connection.service' %}
+
+# https://www.freedesktop.org/software/systemd/man/systemd.unit.html#Mapping%20of%20unit%20properties%20to%20their%20inverses
+[Install]
+RequiredBy={{ systemd_unmetered | join(" ") }}
+Before={{ systemd_unmetered | join(" ") }}
